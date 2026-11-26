@@ -19,6 +19,7 @@ import {
   STORE_INFO,
   TESTIMONIALS,
   formatPrice,
+  publicAssetUrl,
 } from './data/products';
 
 const CATEGORIES: JewelryCategory[] = [
@@ -178,7 +179,7 @@ export default function App() {
                 <div className="flex flex-wrap items-center gap-4 pt-2">
                   <a
                     href="#collection"
-                    className="inline-flex items-center gap-2.5 px-6 py-3.5 min-h-[44px] bg-[#1C1917] text-[#FAF9F6] text-sm font-medium rounded-md hover:bg-[#342F2C] transition-colors whitespace-nowrap shrink-0"
+                    className="inline-flex items-center gap-2.5 px-6 py-3.5 min-h-[44px] bg-[#1C1917] text-[#FAF9F6] text-sm font-medium rounded-md hover:bg-[#342F2C] transition-colors whitespace-nowrap"
                   >
                     <span>Explore Collection</span>
                     <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -186,7 +187,7 @@ export default function App() {
 
                   <a
                     href={STORE_INFO.phoneHref}
-                    className="inline-flex items-center gap-2 px-5 py-3.5 min-h-[44px] border border-[#E6E1D8] bg-white text-[#1C1917] text-sm font-medium rounded-md hover:border-[#9A6F38] transition-colors whitespace-nowrap shrink-0"
+                    className="inline-flex items-center gap-2 px-5 py-3.5 min-h-[44px] border border-[#E6E1D8] bg-white text-[#1C1917] text-sm font-medium rounded-md hover:border-[#9A6F38] transition-colors whitespace-nowrap"
                   >
                     <Phone className="w-4 h-4 text-[#9A6F38]" aria-hidden="true" />
                     <span className="tabular-nums">{STORE_INFO.phone}</span>
@@ -198,7 +199,7 @@ export default function App() {
               <div className="lg:col-span-6 grid grid-cols-12 gap-4 items-stretch min-h-[360px] lg:min-h-[480px]">
                 <div className="col-span-8 rounded-lg overflow-hidden bg-[#F2EFE9] border border-[#E6E1D8]">
                   <ResilientImage
-                    src="/assets/jewelry/gold_chains.jpg"
+                    src={publicAssetUrl('assets/jewelry/gold_chains.jpg')}
                     alt="Layered 18k yellow gold box, rope, and paperclip chains on natural linen"
                     fallbackLabel="Soleil Layered Chain Suite"
                     loading="eager"
@@ -208,7 +209,7 @@ export default function App() {
                 <div className="col-span-4 flex flex-col gap-4">
                   <div className="flex-1 rounded-lg overflow-hidden bg-[#F2EFE9] border border-[#E6E1D8]">
                     <ResilientImage
-                      src="/assets/jewelry/gold_hoops.jpg"
+                      src={publicAssetUrl('assets/jewelry/gold_hoops.jpg')}
                       alt="Twisted 18k gold hoop earrings resting on travertine stones"
                       fallbackLabel="Torsade Hoops"
                       loading="eager"
@@ -485,7 +486,7 @@ export default function App() {
               <div className="lg:col-span-6 grid grid-cols-2 gap-4 min-h-[320px]">
                 <div className="rounded-lg overflow-hidden border border-[#E6E1D8] bg-white">
                   <ResilientImage
-                    src="/assets/jewelry/boutique_display.jpg"
+                    src={publicAssetUrl('assets/jewelry/boutique_display.jpg')}
                     alt="Sunlit architectural jewellery display shelves"
                     fallbackLabel={`${STORE_INFO.name} Boutique`}
                     className="w-full h-full object-cover"
@@ -493,7 +494,7 @@ export default function App() {
                 </div>
                 <div className="rounded-lg overflow-hidden border border-[#E6E1D8] bg-white">
                   <ResilientImage
-                    src="/assets/jewelry/pearl_choker_editorial.jpg"
+                    src={publicAssetUrl('assets/jewelry/pearl_choker_editorial.jpg')}
                     alt="Model wearing freshwater pearl choker and fine gold pendant"
                     fallbackLabel="Editorial Styling"
                     className="w-full h-full object-cover"

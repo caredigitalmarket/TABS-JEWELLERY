@@ -1,5 +1,10 @@
 export type JewelryCategory = 'All' | 'Necklaces' | 'Earrings' | 'Rings' | 'Bracelets';
 
+/** Resolve a file copied from public/ against Vite's configured deployment base. */
+export function publicAssetUrl(path: string): string {
+  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+}
+
 export interface JewelryProduct {
   id: string;
   name: string;
@@ -39,7 +44,7 @@ export const PRODUCTS: JewelryProduct[] = [
     variants: ['16" + 18" Duo', '18" + 20" Duo', 'Full 4-Chain Set'],
     availability: 'In Stock',
     featuredRank: 1,
-    image: '/assets/jewelry/gold_chains.jpg',
+    image: publicAssetUrl('assets/jewelry/gold_chains.jpg'),
     description:
       'Architectural box-link, paperclip, and rope chains crafted to layer effortlessly or wear solo with warm satin sheen.',
     craftNote: 'Hand-soldered lobster clasps with 2-inch extender links for tailored neckline framing.',
@@ -55,7 +60,7 @@ export const PRODUCTS: JewelryProduct[] = [
     variants: ['22mm Everyday', '28mm Statement'],
     availability: 'In Stock',
     featuredRank: 2,
-    image: '/assets/jewelry/gold_hoops.jpg',
+    image: publicAssetUrl('assets/jewelry/gold_hoops.jpg'),
     description:
       'Sculptural braided rope hoops hollow-cast for featherlight all-day comfort and high-polish light reflection.',
     craftNote: 'Click-top hinge closure engineered for secure, snag-free wear.',
@@ -72,7 +77,7 @@ export const PRODUCTS: JewelryProduct[] = [
     variants: ['Small (15.5cm)', 'Medium (17cm)', 'Adjustable Open Cuff'],
     availability: 'Limited Run',
     featuredRank: 3,
-    image: '/assets/jewelry/rose_gold_suite.jpg',
+    image: publicAssetUrl('assets/jewelry/rose_gold_suite.jpg'),
     description:
       'Warm rose-gold open cuff paired with twin diamond-cut medallions, balanced for sunlit evening and bridal wear.',
     craftNote: 'Micro-pavé stones hand-set under 20x magnification for lasting brilliance.',
@@ -89,7 +94,7 @@ export const PRODUCTS: JewelryProduct[] = [
     variants: ['16" Snake Chain', '18" Snake Chain'],
     availability: 'In Stock',
     featuredRank: 4,
-    image: '/assets/jewelry/cushion_halo_pendant.jpg',
+    image: publicAssetUrl('assets/jewelry/cushion_halo_pendant.jpg'),
     description:
       'A luminous cushion-cut center stone framed by a double pavé halo suspended from a fluid rounded herringbone chain.',
     craftNote: 'Open gallery basket maximizes light entry from beneath the pavilion.',
@@ -106,7 +111,7 @@ export const PRODUCTS: JewelryProduct[] = [
     variants: ['18" Crescent Only', '16" + 20" Layered Duo'],
     availability: 'In Stock',
     featuredRank: 5,
-    image: '/assets/jewelry/crescent_pendants.jpg',
+    image: publicAssetUrl('assets/jewelry/crescent_pendants.jpg'),
     description:
       'Deep octagonal blue topaz paired with a hand-engraved crescent talisman set with subtle star-flush accents.',
     craftNote: 'Antiqued satin finish resists hairline marks while deepening golden warmth.',
@@ -123,7 +128,7 @@ export const PRODUCTS: JewelryProduct[] = [
     variants: ['16" Choker Length', '18" Princess Length'],
     availability: 'In Stock',
     featuredRank: 6,
-    image: '/assets/jewelry/pearl_crystal_pendant.jpg',
+    image: publicAssetUrl('assets/jewelry/pearl_crystal_pendant.jpg'),
     description:
       'Lustrous hand-knotted freshwater pearls accented by solid gold spacer beads and a pear-drop crystal heirloom pendant.',
     craftNote: 'Double-knotted on natural silk thread with 18k gold bead separators.',
@@ -140,7 +145,7 @@ export const PRODUCTS: JewelryProduct[] = [
     variants: ['US 5', 'US 6', 'US 7', 'US 8'],
     availability: 'In Stock',
     featuredRank: 7,
-    image: '/assets/jewelry/pave_heart_ring.jpg',
+    image: publicAssetUrl('assets/jewelry/pave_heart_ring.jpg'),
     description:
       'Three interlocking ribbed and pavé-set bands crowned with a sculptural heart silhouette designed for stacking or solo statement.',
     craftNote: 'Comfort-fit inner shank prevents pinching across multi-band wear.',
@@ -157,7 +162,7 @@ export const PRODUCTS: JewelryProduct[] = [
     variants: ['Standard Post Back'],
     availability: 'Limited Run',
     featuredRank: 8,
-    image: '/assets/jewelry/sapphire_earrings.jpg',
+    image: publicAssetUrl('assets/jewelry/sapphire_earrings.jpg'),
     description:
       'Art-deco inspired geometric frame enclosing a vivid pear-cut royal sapphire center stone with baguette crystal borders.',
     craftNote: 'Hypoallergenic sterling posts with wide comfort disc backs for balanced support.',
@@ -174,7 +179,7 @@ export const PRODUCTS: JewelryProduct[] = [
     variants: ['Standard 17cm + 18" Lariat', 'Bracelet Only'],
     availability: 'In Stock',
     featuredRank: 9,
-    image: '/assets/jewelry/layered_necklaces.jpg',
+    image: publicAssetUrl('assets/jewelry/layered_necklaces.jpg'),
     description:
       'Delicate twin-chain bracelet and cascading Y-lariat set punctuated by minimalist bezel-set stones that catch subtle light.',
     craftNote: 'Low-profile bezels stay flush against skin without catching on fine knits.',
@@ -190,7 +195,7 @@ export const PRODUCTS: JewelryProduct[] = [
     variants: ['US 6', 'US 7', 'US 8', 'US 9'],
     availability: 'In Stock',
     featuredRank: 10,
-    image: '/assets/jewelry/silver_rings.jpg',
+    image: publicAssetUrl('assets/jewelry/silver_rings.jpg'),
     description:
       'Liquid-mirror domed signet paired with crossed architectural bands in solid hallmarked 925 sterling silver.',
     craftNote: 'Mirror-lapped by hand and coated with anti-tarnish rhodium veil.',
@@ -207,7 +212,7 @@ export const PRODUCTS: JewelryProduct[] = [
     variants: ['US 5', 'US 6', 'US 7', 'US 8'],
     availability: 'Made to Order',
     featuredRank: 11,
-    image: '/assets/jewelry/ruby_ring.jpg',
+    image: publicAssetUrl('assets/jewelry/ruby_ring.jpg'),
     description:
       'Vibrant rose-rubellite step-cut centerpiece mounted above delicate pavé gallery shoulders for evening elegance.',
     craftNote: 'Individually claw-pronged to showcase clean step-cut facets.',
@@ -223,7 +228,7 @@ export const PRODUCTS: JewelryProduct[] = [
     variants: ['16" Single Chain', '16" + 18" + 20" Trio'],
     availability: 'In Stock',
     featuredRank: 12,
-    image: '/assets/jewelry/dainty_gold_necklaces.jpg',
+    image: publicAssetUrl('assets/jewelry/dainty_gold_necklaces.jpg'),
     description:
       'Feather-light cable chains carrying heirloom miniature charms designed for effortless everyday layering.',
     craftNote: 'Tarnish-resistant 2.5-micron 18k gold layer over recycled sterling core.',
